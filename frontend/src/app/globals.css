@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+
+  --bg: #f8fafc;
+  --card-hex: #ffffff;
+  --text: #0f172a;
+  --border-hex: #e2e8f0;
+}
+
+.ant-btn,
+.ant-input,
+.ant-select-selector,
+.ant-card,
+.ant-tag {
+  border-radius: 2px !important;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.decimal-quantity-card {
+  flex-direction: column;
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+  padding: 14px 14px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.04);
+}
+
+@media (min-width: 768px) {
+  .decimal-quantity-card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.decimal-quantity-card .decimal-quantity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.decimal-quantity-card .decimal-quantity-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.decimal-quantity-card .decimal-quantity-desc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.decimal-quantity-card .decimal-quantity-main {
+  display: grid;
+  grid-template-columns: 44px max-content 44px;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  margin: 10px auto 4px;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.decimal-quantity-card .btn-quantity {
+  height: 44px;
+  width: 44px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  line-height: 1;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 150ms ease;
+  margin: 0;
+}
+
+.decimal-quantity-card .btn-quantity:hover {
+  color: #6366f1;
+}
+
+.decimal-quantity-card .btn-quantity[disabled] {
+  color: #94a3b8;
+}
+
+.decimal-quantity-card .decimal-quantity-input {
+  position: relative;
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  min-width: 160px;
+}
+
+.decimal-quantity-card .input-quantity-decimal {
+  width: 160px;
+  height: 42px;
+  border-radius: 999px;
+  padding: 0 18px;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.decimal-quantity-card .input-suffix {
+  display: none;
+}
+
+.decimal-quantity-card .input-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #0f172a;
+  pointer-events: none;
+  white-space: nowrap;
+  padding: 0 6px;
+}
+
+.decimal-quantity-card .input-overlay-target {
+  color: transparent;
+  caret-color: #0f172a;
+}
+
+.decimal-quantity-card .decimal-quantity-input:focus-within .input-overlay {
+  opacity: 0;
+}
+
+.decimal-quantity-card .decimal-quantity-input:focus-within .input-overlay-target {
+  color: #0f172a;
+}
+
+.decimal-quantity-card .decimal-quantity-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.decimal-quantity-card .chip {
+  padding: 8px 18px;
+  border: 1px solid #eaeaea;
+  background: #fbfbfb;
+  border-radius: 999px;
+  font-size: 15px;
+  line-height: 1;
+  transition: 150ms ease;
+  box-shadow: 0 2px 6px rgba(17, 24, 39, 0.06);
+}
+
+.decimal-quantity-card .chip:hover {
+  border-color: #6366f1;
+  color: #6366f1;
+  background: #ffffff;
+}
+
+.decimal-quantity-card .chip[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.decimal-quantity-card .decimal-quantity-info {
+  font-size: 13px;
+  color: #0f172a;
+  text-align: center;
+  width: 100%;
+}
+
+.decimal-quantity-card .btn-add-to-cart {
+  align-self: flex-start;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 10px;
+  min-height: 42px;
+  line-height: 1;
+  background: #4f46e5;
+  border: 1px solid #4f46e5;
+  color: #ffffff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.decimal-quantity-card .btn-add-to-cart:hover {
+  background: #4338ca;
+  border-color: #4338ca;
+}
+
+.decimal-quantity-card .btn-add-to-cart:disabled {
+  background: #efeef1;
+  border-color: #efeef1;
+  color: #cac7d1;
+}
+
+@media (max-width: 400px) {
+  .decimal-quantity-card {
+    padding: 12px 12px;
+  }
+
+  .decimal-quantity-card .decimal-quantity-chips {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    justify-items: center;
+  }
+
+  .decimal-quantity-card .chip--desktop-only {
+    display: none;
+  }
+
+  .decimal-quantity-card .chip {
+    font-size: 13px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* NProgress styles */
+#nprogress .bar {
+  background: #5E5CE6 !important;
+  height: 3px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #5E5CE6, 0 0 5px #5E5CE6 !important;
+}
+
+/* Ant Design overrides for Ikas-style flat look */
+.ant-layout {
+  background: #ffffff !important;
+}
+
+.ant-card {
+  box-shadow: none !important;
+  border-color: #f0f0f0 !important;
+}
+
+.ant-table-wrapper {
+  background: #ffffff;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+.ant-select-multiple .ant-select-selection-item {
+  background: rgb(247, 245, 255) !important;
+  border: 1px solid rgb(213, 205, 255) !important;
+  margin-right: 8px !important;
+  padding: 2px 2px 2px 5px !important;
+  color: rgb(54, 65, 82) !important;
+  height: 24px !important;
+  font-style: normal !important;
+  font-size: 0.75rem !important;
+  line-height: 1.125rem !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
+}
+
+.ant-select .ant-select-clear {
+  display: none !important;
+}
+
+.ant-select .ant-select-arrow {
+  opacity: 1 !important;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-arrow {
+  opacity: 1 !important;
+}
+
+.ant-table {
+  background: transparent !important;
+}
+
+.ant-table-thead>tr>th {
+  background: #ffffff !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}

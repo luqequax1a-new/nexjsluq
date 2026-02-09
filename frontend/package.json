@@ -1,0 +1,49 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean:next": "node scripts/clean-next.mjs",
+    "dev": "next dev -p 3000",
+    "build": "npm run clean:next && next build",
+    "postinstall": "node scripts/copy-tinymce.mjs",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.6.1",
+    "@ant-design/v5-patch-for-react-19": "^1.0.3",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/modifiers": "^9.0.0",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "antd": "^5.24.0",
+    "clsx": "^2.1.1",
+    "embla-carousel": "^8.5.2",
+    "embla-carousel-react": "^8.5.2",
+    "lucide-react": "^0.563.0",
+    "luq-admin-monorepo": "file:..",
+    "next": "15.1.6",
+    "nprogress": "^0.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-player": "^3.4.0",
+    "recharts": "^3.7.0",
+    "sharp": "^0.33.5",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "tinymce": "^6.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.24",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+  }
+}

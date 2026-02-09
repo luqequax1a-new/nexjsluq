@@ -1,0 +1,347 @@
+{
+  "admin": {
+    "sales": {
+      "title": "Satışlar"
+    },
+    "orders": {
+      "title": "Siparişler",
+      "subtitle": "Tüm siparişleri yönetin ve takip edin",
+      "new_order": "Yeni Sipariş",
+      "guest": "Misafir",
+      "invoice": "Fatura",
+      "list": {
+        "load_failed": "Siparişler yüklenemedi"
+      },
+      "columns": {
+        "order": "Sipariş",
+        "customer": "Müşteri",
+        "status": "Durum",
+        "payment": "Ödeme",
+        "items": "Ürünler",
+        "total": "Toplam"
+      },
+      "stats": {
+        "total_orders": "Toplam Sipariş",
+        "total_revenue": "Toplam Gelir",
+        "pending": "Bekleyen",
+        "shipped": "Kargoda"
+      },
+      "filter": {
+        "status": "Durum",
+        "payment_status": "Ödeme Durumu"
+      },
+      "search_placeholder": "Sipariş no veya müşteri ara...",
+      "pagination": {
+        "total": "Toplam :count sipariş"
+      },
+      "status": {
+        "pending": "Beklemede",
+        "confirmed": "Onaylandı",
+        "processing": "Hazırlanıyor",
+        "shipped": "Kargoda",
+        "delivered": "Teslim Edildi",
+        "cancelled": "İptal Edildi",
+        "refunded": "İade Edildi"
+      },
+      "payment_status": {
+        "pending": "Bekliyor",
+        "paid": "Ödendi",
+        "failed": "Başarısız",
+        "refunded": "İade",
+        "partial_refund": "Kısmi İade"
+      },
+      "detail": {
+        "load_failed": "Sipariş yüklenemedi",
+        "update_success": "Sipariş güncellendi",
+        "update_failed": "Güncelleme başarısız",
+        "note_added": "Not eklendi",
+        "note_failed": "Not eklenemedi",
+        "not_found": "Sipariş Bulunamadı",
+        "not_found_desc": "İstenen sipariş bulunamadı veya silinmiş."
+      },
+      "items": {
+        "product": "Ürün",
+        "unit_price": "Birim Fiyat",
+        "quantity": "Miktar",
+        "tax": "KDV",
+        "total": "Toplam"
+      },
+      "order_items": "Sipariş Kalemleri",
+      "subtotal": "Ara Toplam",
+      "tax": "KDV",
+      "shipping": "Kargo",
+      "discount": "İndirim",
+      "grand_total": "Genel Toplam",
+      "billing_address": "Fatura Adresi",
+      "shipping_address": "Teslimat Adresi",
+      "no_address": "Adres bilgisi yok",
+      "customer": "Müşteri",
+      "guest_customer": "Misafir Müşteri",
+      "order_status": "Sipariş Durumu",
+      "payment_status_title": "Ödeme Durumu",
+      "payment_method": "Yöntem",
+      "shipping_info": "Kargo Bilgileri",
+      "shipping_carrier": "Kargo Firması",
+      "tracking_number": "Takip Numarası",
+      "carrier": "Firma",
+      "tracking": "Takip No",
+      "no_shipping_info": "Kargo bilgisi henüz girilmedi",
+      "notes": "Notlar",
+      "add_note": "Not Ekle",
+      "no_notes": "Henüz not eklenmedi",
+      "note_placeholder": "Sipariş hakkında not yazın...",
+      "order_history": "Sipariş Geçmişi",
+      "no_history": "Geçmiş yok",
+      "select_customer": "Müşteri ara...",
+      "select_category": "Kategori seç..."
+    },
+    "customers": {
+      "title": "Müşteriler",
+      "subtitle": "Müşterilerinizi yönetin ve takip edin",
+      "new_customer": "Yeni Müşteri",
+      "edit_customer": "Müşteri Düzenle",
+      "list": {
+        "load_failed": "Müşteriler yüklenemedi"
+      },
+      "columns": {
+        "customer": "Müşteri",
+        "phone": "Telefon",
+        "group": "Grup",
+        "orders": "Siparişler",
+        "total_spent": "Toplam Harcama",
+        "status": "Durum",
+        "registered": "Kayıt"
+      },
+      "stats": {
+        "total": "Toplam Müşteri",
+        "active": "Aktif Müşteri",
+        "vip": "VIP Müşteri",
+        "new_this_month": "Bu Ay Yeni"
+      },
+      "group": {
+        "normal": "Normal",
+        "vip": "VIP",
+        "wholesale": "Toptancı"
+      },
+      "filter": {
+        "group": "Müşteri Grubu"
+      },
+      "search_placeholder": "İsim, e-posta veya telefon ara...",
+      "pagination": {
+        "total": "Toplam :count müşteri"
+      },
+      "create_success": "Müşteri oluşturuldu",
+      "update_success": "Müşteri güncellendi",
+      "save_failed": "İşlem başarısız",
+      "delete_title": "Müşteriyi Sil",
+      "delete_confirm": ":name müşterisini silmek istediğinize emin misiniz?",
+      "delete_success": "Müşteri silindi",
+      "delete_failed": "Silme başarısız",
+      "detail_failed": "Müşteri detayı yüklenemedi",
+      "form": {
+        "first_name": "Ad",
+        "first_name_required": "Ad gerekli",
+        "last_name": "Soyad",
+        "last_name_required": "Soyad gerekli",
+        "email": "E-posta",
+        "email_required": "Geçerli e-posta gerekli",
+        "phone": "Telefon",
+        "national_id": "TC Kimlik No",
+        "group": "Müşteri Grubu",
+        "notes": "Notlar"
+      },
+      "detail": {
+        "contact": "İletişim",
+        "statistics": "İstatistikler",
+        "addresses": "Adresler",
+        "address": "Adres"
+      },
+      "address": {
+        "title": "Adres Yönetimi",
+        "add_new": "Yeni Adres",
+        "empty": "Henüz bir adres eklenmemiş",
+        "default_title": "Adres",
+        "shipping": "Teslimat",
+        "billing": "Fatura",
+        "create_success": "Adres eklendi",
+        "update_success": "Adres güncellendi",
+        "delete_success": "Adres silindi",
+        "edit": "Adresi Düzenle",
+        "add": "Yeni Adres Ekle",
+        "set_billing": "Varsayılan Fatura Adresi",
+        "set_shipping": "Varsayılan Teslimat Adresi",
+        "form": {
+          "title": "Adres Başlığı",
+          "title_placeholder": "Örn: Ev, İş, Fatura Adresim",
+          "city": "İl",
+          "state": "İlçe",
+          "line1": "Adres",
+          "line1_placeholder": "Mahalle, sokak, no, daire...",
+          "tax_office": "Vergi Dairesi",
+          "tax_number": "Vergi No / TC No"
+        }
+      }
+    },
+    "marketing": {
+      "coupons": {
+        "title": "İndirim Kuponları",
+        "new_coupon": "Yeni Kupon",
+        "edit": "Kuponu Düzenle",
+        "analytics": "Analiz ve İstatistik",
+        "update_success": "Kupon güncellendi",
+        "delete_confirm": "Bu kuponu silmek istediğinize emin misiniz?",
+        "delete_success": "Kupon silindi",
+        "search_placeholder": "Kupon adı veya kod ile ara...",
+        "discount_amount": "İndirim Tutarı",
+        "reports": {
+          "title": "Kampanya Performans Raporları",
+          "btn": "Raporlar",
+          "top_performing": "En İyi Performans Gösteren Kampanyalar",
+          "last_30_days": "Son 30 Gün",
+          "lifetime": "Ömür Boyu",
+          "active_campaigns": "Aktif Kampanyalar",
+          "live": "Canlı",
+          "campaign": "Kampanya",
+          "trend_title": "İndirim Kullanım Trendi (Son 30 Gün)",
+          "usage_count_label": "Kullanım Sayısı",
+          "deleted_coupon": "Silinmiş Kupon",
+          "times": "kez",
+          "unit": "adet",
+          "details": "Analiz"
+        },
+        "stats": {
+          "total_discount": "Toplam Sağlanan İndirim",
+          "total_usages": "Toplam Kupon Kullanımı",
+          "total_usage": "Kullanım Sayısı",
+          "total_sales": "Oluşturulan Satış",
+          "usage_logs": "Kullanım Geçmişi"
+        },
+        "dates": "Geçerlilik",
+        "total_discount": "Toplam İndirim",
+        "name": "Kupon Adı",
+        "code": "Kod",
+        "value": "Değer",
+        "usage": "Kullanım"
+      },
+      "form": {
+        "discount_type_label": "Kampanya Türü",
+        "type_simple": "Basit İndirim (Yüzde veya Sabit Tutar)",
+        "type_bxgy": "X Al Y Bedava (Buy X Get Y)",
+        "type_tiered": "Kademeli İndirim (Harca & Kazan)",
+        "bxgy_settings": "\"X Al Y Bedava\" Ayarları",
+        "customer_buys": "Müşteri Alır (X)",
+        "customer_gets": "İndirimli Alır (Y)",
+        "discount_rate": "İndirim Oranı (%)",
+        "free_extra": "100 = Tamamen bedava",
+        "bxgy_preview_prefix": "Kural: Sepete",
+        "bxgy_preview_mid1": "adet ürün eklendiğinde, sonraki",
+        "bxgy_preview_mid2": "adet ürün",
+        "bxgy_preview_suffix": "indirimli olacak.",
+        "buy_products_label": "Alınacak Ürünler (Opsiyonel)",
+        "buy_products_extra": "Boş bırakılırsa tüm ürünler geçerlidir.",
+        "get_products_label": "İndirimli Olacak Ürünler (Opsiyonel)",
+        "get_products_extra": "Boş bırakılırsa 'Müşteri Alır' kısmındaki ürünlerle aynı kabul edilir.",
+        "tiered_settings": "\"Kademeli İndirim\" Kuralları (Harca & Kazan)",
+        "tiered_min_spend": "Min. Harcama (₺)",
+        "tiered_discount": "İndirim",
+        "tiered_type": "Tip",
+        "tiered_add": "Yeni Kademe Ekle",
+        "tiered_hint": "Müşterinin sepet tutarına uyan en yüksek kademe otomatik olarak uygulanır.",
+        "combination_title": "Kombinasyon ve Öncelik",
+        "combine_coupons_label": "Diğer kupon kodları ile birlikte kullanılabilir",
+        "combine_auto_label": "Otomatik indirimler ile birlikte kullanılabilir",
+        "priority_label": "Öncelik",
+        "priority_extra": "Yüksek öncelikli kuponlar önce uygulanır (0-100)",
+        "summary": "Özet",
+        "new_coupon_fallback": "Yeni Kupon",
+        "new_discount_fallback": "Yeni İndirim",
+        "discount_text": "indirim",
+        "tiered_active": "Kademeli İndirim Etkin",
+        "total_limit": "Toplam Kullanım Limiti",
+        "customer_limit": "Müşteri Başına Limit"
+      }
+    }
+  },
+  "common": {
+    "view": "Görüntüle",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "change": "Değiştir",
+    "go_back": "Geri Dön",
+    "print": "Yazdır",
+    "filter": "Filtrele",
+    "search": "Ara",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "required": "Bu alan zorunludur",
+    "start_date": "Başlangıç",
+    "end_date_optional": "Bitiş (Opsiyonel)",
+    "example": "Örn:",
+    "yes": "Evet",
+    "no": "Hayır",
+    "status": "Durum"
+  },
+  "richtext": {
+    "common": {
+      "cancel": "İptal"
+    },
+    "short_description": {
+      "label": "Kısa Açıklama"
+    },
+    "description": {
+      "label": "Açıklama",
+      "generate": "Açıklama Oluştur"
+    },
+    "toolbar": {
+      "dropdown": {
+        "format": "Biçim",
+        "text": "Metin",
+        "heading1": "Başlık 1",
+        "heading2": "Başlık 2",
+        "heading3": "Başlık 3",
+        "align": "Hizalama",
+        "alignLeft": "Sola hizala",
+        "alignCenter": "Ortala",
+        "alignRight": "Sağa hizala",
+        "alignJustify": "İki yana yasla",
+        "table": "Tablo",
+        "insertTable": "Tablo ekle",
+        "addRow": "Satır ekle",
+        "addColumn": "Sütun ekle"
+      }
+    },
+    "modal": {
+      "link": {
+        "title": "Link ekle",
+        "urlLabel": "URL",
+        "urlPlaceholder": "https://ornek.com",
+        "apply": "Uygula",
+        "remove": "Kaldır"
+      },
+      "image": {
+        "title": "Görsel ekle",
+        "fileLabel": "Dosya",
+        "pick": "Bilgisayardan seç",
+        "width": "Genişlik (px)",
+        "height": "Yükseklik (px)",
+        "auto": "Otomatik",
+        "apply": "Ekle"
+      },
+      "imageEdit": {
+        "title": "Görsel boyutu",
+        "apply": "Uygula",
+        "clear": "Ölçüleri temizle"
+      },
+      "video": {
+        "title": "Video ekle",
+        "fileLabel": "Dosya",
+        "pick": "Bilgisayardan seç",
+        "urlLabel": "Video URL",
+        "urlPlaceholder": "YouTube/Vimeo URL",
+        "apply": "Ekle"
+      }
+    }
+  }
+}

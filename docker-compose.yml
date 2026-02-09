@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: luq_admin_postgres
+    environment:
+      POSTGRES_DB: luq_admin
+      POSTGRES_USER: luq
+      POSTGRES_PASSWORD: luq
+    ports:
+      - "5432:5432"
+    volumes:
+      - luq_admin_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U luq -d luq_admin"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: luq_admin_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - luq_admin_redis_data:/data
+
+volumes:
+  luq_admin_postgres_data:
+  luq_admin_redis_data:

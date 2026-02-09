@@ -1,0 +1,171 @@
+{
+  "admin": {
+    "richtext": {
+      "common": {
+        "cancel": "Cancel"
+      },
+      "short_description": {
+        "label": "Short description"
+      },
+      "description": {
+        "label": "Description",
+        "generate": "Generate Description"
+      },
+      "toolbar": {
+        "dropdown": {
+          "format": "Format",
+          "text": "Text",
+          "heading1": "Heading 1",
+          "heading2": "Heading 2",
+          "heading3": "Heading 3",
+          "align": "Alignment",
+          "alignLeft": "Align left",
+          "alignCenter": "Align center",
+          "alignRight": "Align right",
+          "alignJustify": "Justify",
+          "table": "Table",
+          "insertTable": "Insert table",
+          "addRow": "Add row",
+          "addColumn": "Add column"
+        }
+      },
+      "modal": {
+        "link": {
+          "title": "Insert link",
+          "urlLabel": "URL",
+          "urlPlaceholder": "https://example.com",
+          "apply": "Apply",
+          "remove": "Remove"
+        },
+        "image": {
+          "title": "Insert image",
+          "fileLabel": "File",
+          "pick": "Choose from computer",
+          "width": "Width (px)",
+          "height": "Height (px)",
+          "auto": "Auto",
+          "apply": "Insert"
+        },
+        "imageEdit": {
+          "title": "Image size",
+          "apply": "Apply",
+          "clear": "Clear size"
+        },
+        "video": {
+          "title": "Insert video",
+          "fileLabel": "File",
+          "pick": "Choose from computer",
+          "urlLabel": "Video URL",
+          "urlPlaceholder": "YouTube/Vimeo URL",
+          "apply": "Insert"
+        }
+      }
+    },
+    "marketing": {
+      "coupons": {
+        "title": "Discount Coupons",
+        "new_coupon": "New Coupon",
+        "edit": "Edit Coupon",
+        "analytics": "Performance & Statistics",
+        "update_success": "Coupon updated",
+        "delete_confirm": "Are you sure you want to delete this coupon?",
+        "delete_success": "Coupon deleted",
+        "search_placeholder": "Search by name or code...",
+        "discount_amount": "Discount Amount",
+        "reports": {
+          "title": "Campaign Performance Reports",
+          "btn": "Reports",
+          "top_performing": "Top Performing Campaigns",
+          "last_30_days": "Last 30 Days",
+          "lifetime": "Lifetime",
+          "active_campaigns": "Active Campaigns",
+          "live": "Live",
+          "campaign": "Campaign",
+          "trend_title": "Discount Usage Trend (Last 30 Days)",
+          "usage_count_label": "Usage Count",
+          "deleted_coupon": "Deleted Coupon",
+          "times": "times",
+          "unit": "items",
+          "details": "Analysis"
+        },
+        "stats": {
+          "total_discount": "Total Discount Given",
+          "total_usages": "Total Coupon Usages",
+          "total_usage": "Usage Count",
+          "total_sales": "Sales Generated",
+          "usage_logs": "Usage History"
+        },
+        "columns": {
+          "name": "Coupon Name",
+          "code": "Code",
+          "value": "Value",
+          "usage": "Usage",
+          "dates": "Validity",
+          "total_discount": "Total Discount"
+        },
+        "form": {
+          "discount_type_label": "Campaign Type",
+          "type_simple": "Simple Discount (Percentage or Fixed)",
+          "type_bxgy": "Buy X Get Y",
+          "type_tiered": "Tiered Discount (Spend & Save)",
+          "bxgy_settings": "\"Buy X Get Y\" Settings",
+          "customer_buys": "Customer Buys (X)",
+          "customer_gets": "Customer Gets (Y)",
+          "discount_rate": "Discount Rate (%)",
+          "free_extra": "100 = Completely free",
+          "bxgy_preview_prefix": "Rule: When",
+          "bxgy_preview_mid1": "items are in cart, the next",
+          "bxgy_preview_mid2": "items will be",
+          "bxgy_preview_suffix": "off.",
+          "buy_products_label": "Products to Buy (Optional)",
+          "buy_products_extra": "If left empty, all products are valid.",
+          "get_products_label": "Products to Discount (Optional)",
+          "get_products_extra": "If empty, same as 'Customer Buys' products.",
+          "tiered_settings": "\"Tiered Discount\" Rules (Spend & Save)",
+          "tiered_min_spend": "Min. Spend (₺)",
+          "tiered_discount": "Discount",
+          "tiered_type": "Type",
+          "tiered_add": "Add New Tier",
+          "tiered_hint": "The highest tier matching the customer's cart subtotal is automatically applied.",
+          "combination_title": "Combination & Priority",
+          "combine_coupons_label": "Can be used with other coupon codes",
+          "combine_auto_label": "Can be used with automatic discounts",
+          "priority_label": "Priority",
+          "priority_extra": "Higher priority coupons are applied first (0-100)",
+          "summary": "Summary",
+          "new_coupon_fallback": "New Coupon",
+          "new_discount_fallback": "New Discount",
+          "discount_text": "discount",
+          "tiered_active": "Tiered Discount Active",
+          "total_limit": "Total Usage Limit",
+          "customer_limit": "Limit Per Customer"
+        }
+      }
+    },
+    "common": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "change": "Change",
+      "go_back": "Go Back",
+      "print": "Print",
+      "filter": "Filter",
+      "search": "Search",
+      "active": "Active",
+      "inactive": "Inactive",
+      "required": "This field is required",
+      "start_date": "Start Date",
+      "end_date_optional": "End Date (Optional)",
+      "example": "Ex:",
+      "yes": "Yes",
+      "no": "No",
+      "status": "Status"
+    },
+    "orders": {
+      "select_customer": "Search customer...",
+      "select_category": "Select category..."
+    }
+  }
+}

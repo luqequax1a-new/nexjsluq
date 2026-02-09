@@ -1,0 +1,31 @@
+export type MediaScope = "product" | "variant" | "global";
+export type MediaType = "image" | "video" | "file";
+
+export type MediaItem = {
+  id: number;
+  disk: string;
+  type: MediaType;
+  path: string;
+  thumb_path?: string | null;
+  used_count?: number | null;
+  mime?: string | null;
+  size?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focal_x?: number | null;
+  focal_y?: number | null;
+  crop_x?: number | null;
+  crop_y?: number | null;
+  crop_w?: number | null;
+  crop_h?: number | null;
+  sha1?: string | null;
+  original_name?: string | null;
+  alt?: string | null;
+  scope: MediaScope;
+  product_id?: number | null;
+  product_variant_id?: number | null;
+  position?: number | null;
+  created_by?: number | null;
+  created_at?: string;
+  updated_at?: string;
+};
