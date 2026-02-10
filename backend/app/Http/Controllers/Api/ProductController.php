@@ -332,10 +332,40 @@ class ProductController extends Controller
         $query = Product::query()
             ->with(['media', 'variants.media', 'variants', 'variations.values.imageMedia', 'brand', 'categories', 'saleUnit', 'productUnit']);
 
+        if ($ids = $request->input('ids')) {
+            $query->whereIn('id', (array) $ids);
+        }
+
         if ($search = $request->input('search')) {
             $query->where(function ($q) use ($search) {
                 $q->where('name', 'ilike', "%{$search}%")
                   ->orWhere('sku', 'ilike', "%{$search}%");
+            });
+        }
+
+        if ($categoryId = $request->input('category_id')) {
+            $query->whereHas('categories', function ($q) use ($categoryId) {
+                $q->where('categories.id', $categoryId);
+            });
+        }
+
+        if ($brandId = $request->input('brand_id')) {
+            $query->where('brand_id', $brandId);
+        }
+
+        if ($request->has('is_featured')) {
+            $query->where('is_featured', true);
+        }
+
+        if ($request->has('on_sale')) {
+            $query->whereNotNull('special_price')
+                  ->where('special_price', '>', 0)
+                  ->whereRaw('special_price < price');
+        }
+
+        if ($tagId = $request->input('tag_id')) {
+            $query->whereHas('tags', function ($q) use ($tagId) {
+                $q->where('tags.id', $tagId);
             });
         }
 

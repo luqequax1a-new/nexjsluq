@@ -211,6 +211,12 @@ export function AdminShell({ children }: AdminShellProps) {
         ].filter(item => !item.permission || hasPermission(me, item.permission))
       },
       {
+        key: "/admin/appearance/section-builder",
+        icon: <BgColorsOutlined />,
+        label: "Tema Düzenleyici",
+        permission: "settings.edit"
+      },
+      {
         key: "/admin/menus",
         icon: <BgColorsOutlined />,
         label: t("admin.menus.title", "Menüler"),
@@ -433,7 +439,6 @@ export function AdminShell({ children }: AdminShellProps) {
     <AntdApp>
       <Layout style={{ height: "100vh", overflow: "hidden", background: "#ffffff" }}>
         {globalStyles}
-        {isNavigating ? <PageLoader /> : null}
         {!isFocusMode && (
           <Sider
             width={260}
@@ -569,6 +574,7 @@ export function AdminShell({ children }: AdminShellProps) {
             background: headerState.variant === 'dark' ? "#f9fafb" : "#ffffff",
             position: "relative"
           }}>
+            {isNavigating && <PageLoader />}
             {children}
           </Content>
 

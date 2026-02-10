@@ -61,6 +61,11 @@ class Category extends Model
         return $this->hasMany(Category::class, 'parent_id')->orderBy('name');
     }
 
+    public function allChildren(): HasMany
+    {
+        return $this->hasMany(Category::class, 'parent_id')->orderBy('name')->with('allChildren');
+    }
+
     public function products(): BelongsToMany
     {
         return $this->belongsToMany(Product::class, 'category_product')

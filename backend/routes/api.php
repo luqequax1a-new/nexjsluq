@@ -42,6 +42,7 @@ use App\Http\Controllers\Api\MailSettingsController;
 use App\Http\Controllers\Api\CartController;
 use App\Http\Controllers\Api\AttributeSetController;
 use App\Http\Controllers\Api\ProductAttributeController;
+use App\Http\Controllers\Api\PageSectionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -344,6 +345,19 @@ Route::middleware(['auth:sanctum', 'auth.admin'])->group(function () {
         Route::put('/{redirect}', [App\Http\Controllers\Api\Admin\UrlRedirectController::class, 'update']);
         Route::delete('/{redirect}', [App\Http\Controllers\Api\Admin\UrlRedirectController::class, 'destroy']);
         Route::post('/{redirect}/toggle', [App\Http\Controllers\Api\Admin\UrlRedirectController::class, 'toggleStatus']);
+    });
+
+    // ========== SECTION BUILDER ==========
+    Route::prefix('page-sections')->group(function () {
+        Route::get('/', [PageSectionController::class, 'index']);
+        Route::get('/templates', [PageSectionController::class, 'templates']);
+        Route::post('/', [PageSectionController::class, 'store']);
+        Route::put('/{pageSection}', [PageSectionController::class, 'update']);
+        Route::post('/{pageSection}/toggle', [PageSectionController::class, 'toggle']);
+        Route::post('/{pageSection}/duplicate', [PageSectionController::class, 'duplicate']);
+        Route::delete('/{pageSection}', [PageSectionController::class, 'destroy']);
+        Route::post('/reorder', [PageSectionController::class, 'reorder']);
+        Route::post('/bulk-save', [PageSectionController::class, 'bulkSave']);
     });
 
     // ========== ANALYTICS ==========

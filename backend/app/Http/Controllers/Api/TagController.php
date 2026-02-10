@@ -20,6 +20,14 @@ class TagController extends Controller
     {
         $query = Tag::query()->orderBy('name');
 
+        // Resolve specific IDs (for entity_select)
+        if ($request->has('ids')) {
+            $ids = array_filter((array) $request->get('ids'));
+            if (!empty($ids)) {
+                return response()->json(Tag::whereIn('id', $ids)->get(['id', 'name']));
+            }
+        }
+
         $q = trim((string) $request->get('query', ''));
         if ($q !== '') {
             $query->where('name', 'like', '%' . $q . '%');

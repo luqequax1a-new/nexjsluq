@@ -9,6 +9,9 @@ export function getImageUrl(path: string | null | undefined): string {
   const trimmed = String(path).trim();
   if (!trimmed) return "/placeholder-cat.jpg";
 
+  // Base64 data URLs — return as-is
+  if (trimmed.startsWith("data:")) return trimmed;
+
   // Guard: sometimes non-media identifiers (slug/uids) are mistakenly passed as image paths.
   // If it doesn't look like a path/URL/filename, fall back to placeholder.
   const looksLikeMediaRef =

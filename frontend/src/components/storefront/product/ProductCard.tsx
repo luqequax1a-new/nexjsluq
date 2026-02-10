@@ -14,11 +14,17 @@ export type ProductLike = {
   name: string;
   price?: number;
   selling_price?: number;
+  discount_price?: number;
   qty?: number;
   unit_id?: number;
   unit?: unknown;
   media?: Array<{ url?: string; path?: string }>;
   defaultVariant?: { media?: Array<{ url?: string; path?: string }> };
+  variants?: any[];
+  list_variants_separately?: boolean;
+  brand?: { id: number; name: string; slug?: string } | null;
+  base_image?: any;
+  base_image_thumb?: any;
 };
 
 export default function ProductCard({

@@ -28,6 +28,10 @@ class CategoryController extends Controller
     {
         $query = Category::query()->with(['parent', 'children']);
 
+        if ($ids = $request->input('ids')) {
+            $query->whereIn('id', (array) $ids);
+        }
+
         if ($request->filled('type')) {
             $query->where('type', $request->input('type'));
         }
@@ -62,9 +66,7 @@ class CategoryController extends Controller
         
         $categories = Category::query()
             ->where('type', $type)
-            ->with(['children' => function ($query) {
-                $query->orderBy('name');
-            }])
+            ->with('allChildren')
             ->whereNull('parent_id')
             ->orderBy('name')
             ->get();
@@ -85,8 +87,8 @@ class CategoryController extends Controller
                 'meta_description' => $category->meta_description,
                 'type' => $category->type,
                 'depth' => $depth,
-                'children' => $category->children->isNotEmpty() 
-                    ? $this->buildTree($category->children, $depth + 1) 
+                'children' => $category->allChildren->isNotEmpty() 
+                    ? $this->buildTree($category->allChildren, $depth + 1) 
                     : [],
             ];
         })->toArray();

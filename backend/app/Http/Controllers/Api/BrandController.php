@@ -25,6 +25,10 @@ class BrandController extends Controller
     {
         $query = Brand::query();
 
+        if ($ids = $request->input('ids')) {
+            $query->whereIn('id', (array) $ids);
+        }
+
         if ($request->filled('search')) {
             $search = $request->input('search');
             $query->where('name', 'ilike', "%{$search}%");
